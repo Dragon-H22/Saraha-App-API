@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "8c2c5059-3cff-4748-80e9-d18bdba895fc",
+		"name": "Saraha App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23533987"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"HossamH22\",\r\n    \"email\": \"hosam.hatem222@gmail.com\",\r\n    \"password\": \"Hossam@123\",\r\n    \"cPassword\": \"Hossam@123\",\r\n    \"age\":21\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"hossam@gmail.com\",\r\n    \"password\": \"Hossam@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "H_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjAwZGY2MDVlOGViNDZkMTk5NmY5NCIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3OTk0MTI2NiwiZXhwIjoxNjc5OTQ4NDY2fQ.PUuYkpDnhsA51JYHFgLmA-78YDoXZURBA869sGnEeOg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/update/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update profile pic",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "H__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjQzYWMzMjg1YjA1Yzk2OWE2MjIzOSIsImlzTG9nZ2VkSW4iOnRydWUsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjgwNDc1NDEwLCJleHAiOjE2ODA0ODI2MTB9.mEUYd0htIv8fhGpZ9b-Lzbt8-WkL3LB3mK-7R7lJldo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/hosam/Desktop/Fotoghrafi/assests/e2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/profilePic/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"profilePic",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update profile cover pic",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "H__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjQzYWMzMjg1YjA1Yzk2OWE2MjIzOSIsImlzTG9nZ2VkSW4iOnRydWUsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjgwNDc1NDEwLCJleHAiOjE2ODA0ODI2MTB9.mEUYd0htIv8fhGpZ9b-Lzbt8-WkL3LB3mK-7R7lJldo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": [
+										"/C:/Users/hosam/Desktop/Fotoghrafi/assests/e4.jpg",
+										"/C:/Users/hosam/Desktop/Fotoghrafi/assests/e5.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/profileCovPic/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"profileCovPic",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "H_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjAwZGY2MDVlOGViNDZkMTk5NmY5NCIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3OTk0MTI2NiwiZXhwIjoxNjc5OTQ4NDY2fQ.PUuYkpDnhsA51JYHFgLmA-78YDoXZURBA869sGnEeOg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/delete/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "H__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjNmOWQxZGVmMThmNWU1NTRmZDM2NiIsImlzTG9nZ2VkSW4iOnRydWUsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjgwMDgxMzE3LCJleHAiOjE2ODAwODg1MTd9.Q2Xn7rhgwkDpR3yAqTQ4GRr3K20PlN4_dKCEZHewgTo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "share profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "H__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjNmOWQxZGVmMThmNWU1NTRmZDM2NiIsImlzTG9nZ2VkSW4iOnRydWUsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjgwMDgxMzE3LCJleHAiOjE2ODAwODg1MTd9.Q2Xn7rhgwkDpR3yAqTQ4GRr3K20PlN4_dKCEZHewgTo",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/user/64243ac3285b05c969a62239/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"64243ac3285b05c969a62239",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update password",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "H__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjQzYWMzMjg1YjA1Yzk2OWE2MjIzOSIsImlzTG9nZ2VkSW4iOnRydWUsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjgwNDI0NTY3LCJleHAiOjE2ODA0MzE3Njd9.cuRnmVKddEfqY1Iaq6b0ZXahxBrzmlnERwZUaz5pZJE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"Hosssam@123\",\r\n    \"newPassword\":\"Hossam@123\",\r\n    \"cPassword\":\"Hossam@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"444 message\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/message/64243ac3285b05c969a62239",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"message",
+								"64243ac3285b05c969a62239"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all message",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "H__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjQzYWMzMjg1YjA1Yzk2OWE2MjIzOSIsImlzTG9nZ2VkSW4iOnRydWUsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjgwNDI0NTY3LCJleHAiOjE2ODA0MzE3Njd9.cuRnmVKddEfqY1Iaq6b0ZXahxBrzmlnERwZUaz5pZJE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/message/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"message",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "H__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjQzYWMzMjg1YjA1Yzk2OWE2MjIzOSIsImlzTG9nZ2VkSW4iOnRydWUsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjgwNDI0NTY3LCJleHAiOjE2ODA0MzE3Njd9.cuRnmVKddEfqY1Iaq6b0ZXahxBrzmlnERwZUaz5pZJE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/message/6424526399d5a0decac39873",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"message",
+								"6424526399d5a0decac39873"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
